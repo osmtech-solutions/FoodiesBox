@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abeezee</item>
+        <item>@font/emilys_candy</item>
+        <item>@font/great_vibes</item>
+        <item>@font/leckerli_one</item>
+        <item>@font/open_sans</item>
+        <item>@font/playfair_display</item>
+    </array>
+</resources>

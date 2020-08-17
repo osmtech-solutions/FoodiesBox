@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@drawable/login_bg"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/abeezee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verify your account"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textSize="25sp"
+                android:textColor="@color/redPrimaryDark"
+                android:textStyle="bold"
+                android:padding="10dp"/>
+            <TextView
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/abeezee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We have sent a 4-digit code to your mobile number"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite" />
+            <TextView
+                android:id="@+id/mobileno_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textColor="#000" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <EditText
+                android:id="@+id/otp_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:gravity="center"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:nextFocusRight="@+id/otp_2"
+                android:imeOptions="actionNext"
+                android:padding="15dp"
+                android:text=""
+                android:inputType="number"/>
+            <requestFocus/>
+            <EditText
+                android:id="@+id/otp_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:padding="15dp"
+                android:nextFocusRight="@+id/otp_3"
+                android:text=""
+                android:inputType="number"/>
+            <requestFocus/>
+            <EditText
+                android:id="@+id/otp_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:gravity="center"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:nextFocusRight="@+id/otp_4"
+                android:imeOptions="actionNext"
+                android:padding="15dp"
+                android:text=""
+                android:inputType="number"/>
+            <requestFocus/>
+            <EditText
+                android:id="@+id/otp_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:gravity="center"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:padding="15dp"
+                android:text=""
+                android:inputType="number"/>
+            <requestFocus/>
+        </LinearLayout>
+        <Button
+            android:fontFamily="@font/abeezee"
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"/>
+
+        <TextView
+            android:fontFamily="@font/abeezee"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:text="Didn't receive the code? Do the following." />
+
+        <TextView
+            android:fontFamily="@font/abeezee"
+            android:drawableLeft="@drawable/email"
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:text="   RESEND OTP BY SMS" />
+
+        <TextView
+            android:fontFamily="@font/abeezee"
+            android:drawableLeft="@drawable/ic_phone_in_talk"
+            android:textAlignment="center"
+            android:id="@+id/resend_call"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="   RESEND OTP BY CALL"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:background="@drawable/layout_bg"
+            android:orientation="horizontal" >
+
+
+
+            <TextView
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please wait for "
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/txt_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:30 seconds"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:focusable="true"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

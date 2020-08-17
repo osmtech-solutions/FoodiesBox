@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:fontFamily="@font/abeezee"
+                    android:textColor="@color/colorBlack"
+                    android:layout_gravity="center"
+                    android:textSize="22dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:layout_height="wrap_content"
+                    android:text="Search food"/>
+                <ImageView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/img_close"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_close_grey"
+                    />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <SearchView
+                    android:clickable="true"
+                    android:id="@+id/bottom_food_search"
+                    android:queryHint="Search for food, restaurants..."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/voice_to_txt"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_mic_red"
+                android:textColor="@color/redPrimaryDark"
+                android:fontFamily="@font/abeezee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text=" Use voice search"/>
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/abeezee"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent search"/>
+            <TextView
+                android:drawableLeft="@drawable/ic_baseline_history_24"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/abeezee"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Pizza"/>
+            <TextView
+                android:id="@+id/txt_biryani"
+                android:drawableLeft="@drawable/ic_baseline_history_24"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/abeezee"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Burger"/>
+            <ListView
+                android:visibility="gone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/abeezee"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular items around you"/>
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/milk"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content">
+                <ImageView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/milk"
+                    />
+                <TextView
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/abeezee"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Milk"
+                    android:gravity="center_horizontal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/fruit"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/fruits"
+                        />
+                    <TextView
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abeezee"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fruits"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/meat"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/meat1"
+                        />
+                    <TextView
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abeezee"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Meat"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/vegetables"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/vegetable"
+                        />
+                    <TextView
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abeezee"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Vegetables"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/abeezee"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular cuisines around you"/>
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/north_india"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_marginTop="7dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:layout_width="55dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/northindian"
+                        />
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abeezee"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="North Indian"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/biryani"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/biryani"
+                        />
+                    <TextView
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/abeezee"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Biryani"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/chicken"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/chicken"
+                        />
+                    <TextView
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abeezee"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chicken"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cake"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/cake"
+                        />
+                    <TextView
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abeezee"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cake &amp; Deserts"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

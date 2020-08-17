@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.styc.foodie.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_rate"
+        android:name="com.styc.foodie.ui.rate.RateUsFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_rateus" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.styc.foodie.ui.share.ShareAppFragment"
+        android:label="Share App"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/nav_offers"
+        android:name="com.styc.foodie.ui.offers.OffersFragment"
+        android:label="Ongoing Offers"
+        tools:layout="@layout/fragment_offers" />
+</navigation>
